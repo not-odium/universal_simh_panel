@@ -1,0 +1,64 @@
+{
+    "simulators": [
+        {
+            "name": "PDP-11",
+            "executable": "simh/pdp11",
+            "description": "DEC PDP-11/70 — 16-bit minicomputer (1970)",
+            "startup_options": ["-Q"]
+        },
+        {
+            "name": "PDP-8",
+            "executable": "simh/pdp8",
+            "description": "DEC PDP-8 — 12-bit minicomputer (1965)",
+            "startup_options": ["-Q"]
+        },
+        {
+            "name": "Altair 8800",
+            "executable": "simh/altairz80",
+            "description": "MITS Altair 8800 — Intel 8080 (1975)",
+            "startup_options": ["-Q"]
+        },
+        {
+            "name": "VAX",
+            "executable": "simh/vax",
+            "description": "DEC VAX-11/780 — 32-bit supermini (1977)",
+            "startup_options": ["-Q"]
+        },
+        {
+            "name": "PDP-1",
+            "executable": "simh/pdp1",
+            "description": "DEC PDP-1 — 18-bit, родина Spacewar! (1960)",
+            "startup_options": ["-Q"]
+        },
+        {
+            "name": "PDP-10",
+            "executable": "simh/pdp10-ka",
+            "description": "DEC PDP-10 (KA10) — 36-bit мейнфрейм разделения времени (1968)",
+            "startup_options": ["-Q"]
+        },
+        {
+            "name": "Nova",
+            "executable": "simh/nova",
+            "description": "Data General Nova 1200 — 16-bit мини-ЭВМ (1969)",
+            "startup_options": ["-Q"]
+        },
+        {
+            "name": "IBM 1401",
+            "executable": "simh/i1401",
+            "description": "IBM 1401 — десятичная бизнес-ЭВМ (1959)",
+            "startup_options": ["-Q"]
+        },
+        {
+            "name": "HP 2100",
+            "executable": "simh/hp2100",
+            "description": "Hewlett-Packard 2100A — 16-bit мини-ЭВМ (1971)",
+            "startup_options": ["-Q"]
+        },
+        {
+            "name": "Honeywell H316",
+            "executable": "simh/h316",
+            "description": "Honeywell H316 — 16-bit, узел ARPANET IMP (1969)",
+            "startup_options": ["-Q"]
+        }
+    ]
+}

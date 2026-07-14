@@ -1,0 +1,2198 @@
+{
+    "PDP-11": {
+        "title": "DEC PDP-11/70",
+        "addr_step": 2,
+        "sections": [
+            {
+                "title": "PROCESSOR STATUS",
+                "widgets": [
+                    {
+                        "type": "led",
+                        "id": "run",
+                        "label": "RUN",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "bus",
+                        "label": "BUS",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "console",
+                        "label": "CONS",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "user",
+                        "label": "USER",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "super",
+                        "label": "SUPER",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "kernel",
+                        "label": "KERNEL",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "data_p",
+                        "label": "DATA",
+                        "color": "orange"
+                    },
+                    {
+                        "type": "led",
+                        "id": "addr_err",
+                        "label": "ADDR\nERR",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "parity",
+                        "label": "PAR",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "master",
+                        "label": "MSTR",
+                        "color": "yellow"
+                    }
+                ]
+            },
+            {
+                "title": "ADDRESS REGISTER",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "address_lights",
+                        "bits": 22,
+                        "color": "red",
+                        "label": "A21 … A0",
+                        "group_size": 3
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "address_display",
+                        "digits": 8,
+                        "radix": 8
+                    }
+                ]
+            },
+            {
+                "title": "DATA REGISTER",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "data_lights",
+                        "bits": 16,
+                        "color": "red",
+                        "label": "D15 … D0",
+                        "group_size": 3
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "data_display",
+                        "digits": 6,
+                        "radix": 8
+                    }
+                ]
+            },
+            {
+                "title": "SWITCH REGISTER",
+                "widgets": [
+                    {
+                        "type": "switch_register",
+                        "id": "switch_reg",
+                        "bits": 22,
+                        "label": "SR (octal)",
+                        "group_size": 3
+                    }
+                ]
+            },
+            {
+                "title": "CONTROL",
+                "widgets": [
+                    {
+                        "type": "toggle",
+                        "id": "enable_halt",
+                        "label": "ENABLE\nHALT"
+                    },
+                    {
+                        "type": "button",
+                        "id": "halt",
+                        "label": "HALT",
+                        "command": "halt",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "cont",
+                        "label": "CONT",
+                        "command": "continue",
+                        "color": "green"
+                    },
+                    {
+                        "type": "button",
+                        "id": "s_inst",
+                        "label": "S.INST",
+                        "command": "step 1",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "button",
+                        "id": "start",
+                        "label": "START",
+                        "command": "run",
+                        "color": "green"
+                    },
+                    {
+                        "type": "button",
+                        "id": "boot",
+                        "label": "BOOT",
+                        "command": "boot rk0",
+                        "color": "orange"
+                    },
+                    {
+                        "type": "button",
+                        "id": "exam",
+                        "label": "EXAM",
+                        "command": "examine",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "dep",
+                        "label": "DEP",
+                        "command": "deposit",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "load_a",
+                        "label": "LOAD\nADDR",
+                        "command": "load_addr",
+                        "color": "gray"
+                    },
+                    {
+                        "type": "button",
+                        "id": "reset",
+                        "label": "RESET",
+                        "command": "reset all",
+                        "color": "red"
+                    }
+                ]
+            }
+        ]
+    },
+    "PDP-8": {
+        "title": "DEC PDP-8/I",
+        "sections": [
+            {
+                "title": "INSTRUCTION",
+                "widgets": [
+                    {
+                        "type": "led",
+                        "id": "and_i",
+                        "label": "AND",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "tad",
+                        "label": "TAD",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "isz",
+                        "label": "ISZ",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "dca",
+                        "label": "DCA",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "jms",
+                        "label": "JMS",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "jmp",
+                        "label": "JMP",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "iot",
+                        "label": "IOT",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "opr",
+                        "label": "OPR",
+                        "color": "yellow"
+                    }
+                ]
+            },
+            {
+                "title": "MACHINE STATE",
+                "widgets": [
+                    {
+                        "type": "led",
+                        "id": "fetch",
+                        "label": "FETCH",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "exec",
+                        "label": "EXEC",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "defer",
+                        "label": "DEFER",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "wc",
+                        "label": "W.CNT",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "ca",
+                        "label": "C.ADDR",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "break_i",
+                        "label": "BREAK",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "ion",
+                        "label": "ION",
+                        "color": "orange"
+                    },
+                    {
+                        "type": "led",
+                        "id": "pause",
+                        "label": "PAUSE",
+                        "color": "orange"
+                    },
+                    {
+                        "type": "led",
+                        "id": "run",
+                        "label": "RUN",
+                        "color": "green"
+                    }
+                ]
+            },
+            {
+                "title": "PROGRAM COUNTER",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "pc_lights",
+                        "bits": 12,
+                        "color": "red",
+                        "label": "PC (12 bit)",
+                        "group_size": 3
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "pc_display",
+                        "digits": 4,
+                        "radix": 8
+                    }
+                ]
+            },
+            {
+                "title": "MEMORY ADDRESS / MEMORY BUFFER",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "ma_lights",
+                        "bits": 12,
+                        "color": "red",
+                        "label": "MA",
+                        "group_size": 3
+                    },
+                    {
+                        "type": "light_register",
+                        "id": "mb_lights",
+                        "bits": 12,
+                        "color": "red",
+                        "label": "MB",
+                        "group_size": 3
+                    }
+                ]
+            },
+            {
+                "title": "ACCUMULATOR / MULTIPLIER QUOTIENT",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "ac_lights",
+                        "bits": 12,
+                        "color": "green",
+                        "label": "AC",
+                        "group_size": 3
+                    },
+                    {
+                        "type": "light_register",
+                        "id": "mq_lights",
+                        "bits": 12,
+                        "color": "green",
+                        "label": "MQ",
+                        "group_size": 3
+                    }
+                ]
+            },
+            {
+                "title": "SWITCH REGISTER",
+                "widgets": [
+                    {
+                        "type": "switch_register",
+                        "id": "switch_reg",
+                        "bits": 12,
+                        "label": "SR (octal)",
+                        "group_size": 3
+                    }
+                ]
+            },
+            {
+                "title": "CONTROL",
+                "widgets": [
+                    {
+                        "type": "button",
+                        "id": "start",
+                        "label": "START",
+                        "command": "run",
+                        "color": "green"
+                    },
+                    {
+                        "type": "button",
+                        "id": "load_a",
+                        "label": "LOAD\nADDR",
+                        "command": "load_addr",
+                        "color": "gray"
+                    },
+                    {
+                        "type": "button",
+                        "id": "dep",
+                        "label": "DEP",
+                        "command": "deposit",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "exam",
+                        "label": "EXAM",
+                        "command": "examine",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "cont",
+                        "label": "CONT",
+                        "command": "continue",
+                        "color": "green"
+                    },
+                    {
+                        "type": "button",
+                        "id": "stop",
+                        "label": "STOP",
+                        "command": "halt",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "s_step",
+                        "label": "SING\nSTEP",
+                        "command": "step 1",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "button",
+                        "id": "s_inst",
+                        "label": "SING\nINST",
+                        "command": "step 1",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "button",
+                        "id": "reset",
+                        "label": "RESET",
+                        "command": "reset all",
+                        "color": "red"
+                    }
+                ]
+            }
+        ]
+    },
+    "Altair 8800": {
+        "title": "MITS Altair 8800",
+        "sections": [
+            {
+                "title": "STATUS",
+                "widgets": [
+                    {
+                        "type": "led",
+                        "id": "inte",
+                        "label": "INTE",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "prot",
+                        "label": "PROT",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "memr",
+                        "label": "MEMR",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "inp",
+                        "label": "INP",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "mi",
+                        "label": "MI",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "out",
+                        "label": "OUT",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "hlta",
+                        "label": "HLTA",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "stack",
+                        "label": "STACK",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "wo",
+                        "label": "WO",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "int_l",
+                        "label": "INT",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "wait",
+                        "label": "WAIT",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "hlda",
+                        "label": "HLDA",
+                        "color": "red"
+                    }
+                ]
+            },
+            {
+                "title": "ADDRESS BUS",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "address_lights",
+                        "bits": 16,
+                        "color": "red",
+                        "label": "A15 … A0",
+                        "group_size": 4
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "address_display",
+                        "digits": 6,
+                        "radix": 8
+                    }
+                ]
+            },
+            {
+                "title": "DATA BUS",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "data_lights",
+                        "bits": 8,
+                        "color": "red",
+                        "label": "D7 … D0",
+                        "group_size": 4
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "data_display",
+                        "digits": 3,
+                        "radix": 8
+                    }
+                ]
+            },
+            {
+                "title": "INPUT SWITCHES",
+                "widgets": [
+                    {
+                        "type": "switch_register",
+                        "id": "switch_reg",
+                        "bits": 16,
+                        "label": "S15 … S0 (hex)",
+                        "group_size": 4
+                    }
+                ]
+            },
+            {
+                "title": "CONTROL",
+                "widgets": [
+                    {
+                        "type": "button",
+                        "id": "stop_b",
+                        "label": "STOP",
+                        "command": "halt",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "run_b",
+                        "label": "RUN",
+                        "command": "run",
+                        "color": "green"
+                    },
+                    {
+                        "type": "button",
+                        "id": "step_b",
+                        "label": "SINGLE\nSTEP",
+                        "command": "step 1",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "button",
+                        "id": "exam_b",
+                        "label": "EXAMINE",
+                        "command": "examine",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "exam_n",
+                        "label": "EXAM\nNEXT",
+                        "command": "examine +1",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "dep_b",
+                        "label": "DEPOSIT",
+                        "command": "deposit",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "dep_n",
+                        "label": "DEP\nNEXT",
+                        "command": "deposit +1",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "reset_b",
+                        "label": "RESET",
+                        "command": "reset all",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "clr_b",
+                        "label": "CLR",
+                        "command": "reset cpu",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "aux1",
+                        "label": "AUX 1",
+                        "command": "boot",
+                        "color": "orange"
+                    },
+                    {
+                        "type": "button",
+                        "id": "aux2",
+                        "label": "AUX 2",
+                        "command": "attach",
+                        "color": "orange"
+                    }
+                ]
+            }
+        ]
+    },
+    "VAX": {
+        "title": "DEC VAX-11/780",
+        "addr_step": 4,
+        "sections": [
+            {
+                "title": "SYSTEM STATUS",
+                "widgets": [
+                    {
+                        "type": "led",
+                        "id": "power",
+                        "label": "POWER",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "run",
+                        "label": "RUN",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "halt",
+                        "label": "HALT",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "fault",
+                        "label": "FAULT",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "mchk",
+                        "label": "MCHK",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "intrpt",
+                        "label": "INT",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "kernel",
+                        "label": "KERNEL",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "exec_m",
+                        "label": "EXEC",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "super_m",
+                        "label": "SUPER",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "user_m",
+                        "label": "USER",
+                        "color": "green"
+                    }
+                ]
+            },
+            {
+                "title": "ADDRESS / DATA",
+                "widgets": [
+                    {
+                        "type": "seven_seg",
+                        "id": "address_display",
+                        "digits": 8,
+                        "radix": 16
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "data_display",
+                        "digits": 8,
+                        "radix": 16
+                    }
+                ]
+            },
+            {
+                "title": "SWITCH REGISTER",
+                "widgets": [
+                    {
+                        "type": "switch_register",
+                        "id": "switch_reg",
+                        "bits": 16,
+                        "label": "SR (hex)",
+                        "group_size": 4
+                    }
+                ]
+            },
+            {
+                "title": "OPTIONS",
+                "widgets": [
+                    {
+                        "type": "toggle",
+                        "id": "auto_restart",
+                        "label": "AUTO\nRESTART"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "boot_upper",
+                        "label": "UPPER\nBOOT"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "local_remote",
+                        "label": "LOCAL/\nREMOTE"
+                    }
+                ]
+            },
+            {
+                "title": "CONTROL",
+                "widgets": [
+                    {
+                        "type": "button",
+                        "id": "halt_b",
+                        "label": "HALT",
+                        "command": "halt",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "cont_b",
+                        "label": "CONT",
+                        "command": "continue",
+                        "color": "green"
+                    },
+                    {
+                        "type": "button",
+                        "id": "boot_b",
+                        "label": "BOOT",
+                        "command": "boot",
+                        "color": "orange"
+                    },
+                    {
+                        "type": "button",
+                        "id": "restart_b",
+                        "label": "RESTART",
+                        "command": "reset all",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "button",
+                        "id": "exam_b",
+                        "label": "EXAM",
+                        "command": "examine",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "dep_b",
+                        "label": "DEP",
+                        "command": "deposit",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "step_b",
+                        "label": "STEP",
+                        "command": "step 1",
+                        "color": "yellow"
+                    }
+                ]
+            }
+        ]
+    },
+    "PDP-1": {
+        "title": "DEC PDP-1",
+        "sections": [
+            {
+                "title": "STATUS",
+                "widgets": [
+                    {
+                        "type": "led",
+                        "id": "run",
+                        "label": "RUN",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "cycle",
+                        "label": "CYCLE",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "defer",
+                        "label": "DEFER",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "hs_cycle",
+                        "label": "HS\nCYC",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "overflow",
+                        "label": "OVF",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "seq_break",
+                        "label": "SEQ\nBRK",
+                        "color": "orange"
+                    },
+                    {
+                        "type": "led",
+                        "id": "io_halt",
+                        "label": "IO\nHLT",
+                        "color": "red"
+                    }
+                ]
+            },
+            {
+                "title": "PROGRAM FLAGS",
+                "widgets": [
+                    {
+                        "type": "led",
+                        "id": "pf1",
+                        "label": "1",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "pf2",
+                        "label": "2",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "pf3",
+                        "label": "3",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "pf4",
+                        "label": "4",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "pf5",
+                        "label": "5",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "pf6",
+                        "label": "6",
+                        "color": "yellow"
+                    }
+                ]
+            },
+            {
+                "title": "ACCUMULATOR",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "ac_lights",
+                        "bits": 18,
+                        "color": "green",
+                        "label": "AC (18)",
+                        "group_size": 3
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "data_display",
+                        "digits": 6,
+                        "radix": 8
+                    }
+                ]
+            },
+            {
+                "title": "IN-OUT REGISTER",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "io_lights",
+                        "bits": 18,
+                        "color": "green",
+                        "label": "IO (18)",
+                        "group_size": 3
+                    }
+                ]
+            },
+            {
+                "title": "MEMORY BUFFER",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "mb_lights",
+                        "bits": 18,
+                        "color": "red",
+                        "label": "MB (18)",
+                        "group_size": 3
+                    }
+                ]
+            },
+            {
+                "title": "PROGRAM COUNTER",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "address_lights",
+                        "bits": 16,
+                        "color": "red",
+                        "label": "PC (16)",
+                        "group_size": 4
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "address_display",
+                        "digits": 6,
+                        "radix": 8
+                    }
+                ]
+            },
+            {
+                "title": "SENSE SWITCHES",
+                "widgets": [
+                    {
+                        "type": "toggle",
+                        "id": "ss1",
+                        "label": "SS1"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "ss2",
+                        "label": "SS2"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "ss3",
+                        "label": "SS3"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "ss4",
+                        "label": "SS4"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "ss5",
+                        "label": "SS5"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "ss6",
+                        "label": "SS6"
+                    }
+                ]
+            },
+            {
+                "title": "TEST WORD",
+                "widgets": [
+                    {
+                        "type": "switch_register",
+                        "id": "switch_reg",
+                        "bits": 18,
+                        "label": "TW (octal)",
+                        "group_size": 3
+                    }
+                ]
+            },
+            {
+                "title": "CONTROL",
+                "widgets": [
+                    {
+                        "type": "button",
+                        "id": "start",
+                        "label": "START",
+                        "command": "run",
+                        "color": "green"
+                    },
+                    {
+                        "type": "button",
+                        "id": "stop",
+                        "label": "STOP",
+                        "command": "halt",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "cont",
+                        "label": "CONT",
+                        "command": "continue",
+                        "color": "green"
+                    },
+                    {
+                        "type": "button",
+                        "id": "s_inst",
+                        "label": "SING\nINST",
+                        "command": "step 1",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "button",
+                        "id": "exam",
+                        "label": "EXAM",
+                        "command": "examine",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "dep",
+                        "label": "DEP",
+                        "command": "deposit",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "load_a",
+                        "label": "LOAD\nADDR",
+                        "command": "load_addr",
+                        "color": "gray"
+                    },
+                    {
+                        "type": "button",
+                        "id": "read_in",
+                        "label": "READ\nIN",
+                        "command": "boot",
+                        "color": "orange"
+                    },
+                    {
+                        "type": "button",
+                        "id": "reset",
+                        "label": "RESET",
+                        "command": "reset all",
+                        "color": "red"
+                    }
+                ]
+            }
+        ]
+    },
+    "PDP-10": {
+        "title": "DEC PDP-10 (KA10)",
+        "sections": [
+            {
+                "title": "MACHINE STATE",
+                "widgets": [
+                    {
+                        "type": "led",
+                        "id": "power",
+                        "label": "POWER",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "run",
+                        "label": "RUN",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "pgm_stop",
+                        "label": "PGM\nSTOP",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "user",
+                        "label": "USER",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "pi_on",
+                        "label": "PI\nON",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "mem_prot",
+                        "label": "MEM\nPROT",
+                        "color": "orange"
+                    },
+                    {
+                        "type": "led",
+                        "id": "addr_stop",
+                        "label": "ADDR\nSTOP",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "fetch",
+                        "label": "FETCH",
+                        "color": "green"
+                    }
+                ]
+            },
+            {
+                "title": "PROGRAM COUNTER",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "address_lights",
+                        "bits": 18,
+                        "color": "red",
+                        "label": "PC (18)",
+                        "group_size": 3
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "address_display",
+                        "digits": 6,
+                        "radix": 8
+                    }
+                ]
+            },
+            {
+                "title": "MEMORY ADDRESS",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "ma_lights",
+                        "bits": 18,
+                        "color": "red",
+                        "label": "MA (18)",
+                        "group_size": 3
+                    }
+                ]
+            },
+            {
+                "title": "INSTRUCTION",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "ir_lights",
+                        "bits": 18,
+                        "color": "yellow",
+                        "label": "IR (18)",
+                        "group_size": 3
+                    }
+                ]
+            },
+            {
+                "title": "MEMORY INDICATORS",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "data_lights",
+                        "bits": 36,
+                        "color": "green",
+                        "label": "MI (36)",
+                        "group_size": 3
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "data_display",
+                        "digits": 12,
+                        "radix": 8
+                    }
+                ]
+            },
+            {
+                "title": "DATA SWITCHES",
+                "widgets": [
+                    {
+                        "type": "switch_register",
+                        "id": "switch_reg",
+                        "bits": 36,
+                        "label": "DS (octal)",
+                        "group_size": 3
+                    }
+                ]
+            },
+            {
+                "title": "CONTROL",
+                "widgets": [
+                    {
+                        "type": "button",
+                        "id": "start",
+                        "label": "START",
+                        "command": "run",
+                        "color": "green"
+                    },
+                    {
+                        "type": "button",
+                        "id": "stop",
+                        "label": "STOP",
+                        "command": "halt",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "cont",
+                        "label": "CONT",
+                        "command": "continue",
+                        "color": "green"
+                    },
+                    {
+                        "type": "button",
+                        "id": "xct",
+                        "label": "XCT\nINST",
+                        "command": "step 1",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "button",
+                        "id": "exam",
+                        "label": "EXAM",
+                        "command": "examine",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "dep",
+                        "label": "DEP",
+                        "command": "deposit",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "load_a",
+                        "label": "LOAD\nADDR",
+                        "command": "load_addr",
+                        "color": "gray"
+                    },
+                    {
+                        "type": "button",
+                        "id": "read_in",
+                        "label": "READ\nIN",
+                        "command": "boot",
+                        "color": "orange"
+                    },
+                    {
+                        "type": "button",
+                        "id": "reset",
+                        "label": "RESET",
+                        "command": "reset all",
+                        "color": "red"
+                    }
+                ]
+            }
+        ]
+    },
+    "Nova": {
+        "title": "Data General Nova 1200",
+        "sections": [
+            {
+                "title": "STATUS",
+                "widgets": [
+                    {
+                        "type": "led",
+                        "id": "run",
+                        "label": "RUN",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "ion",
+                        "label": "ION",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "carry",
+                        "label": "CARRY",
+                        "color": "orange"
+                    },
+                    {
+                        "type": "led",
+                        "id": "fetch",
+                        "label": "FETCH",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "defer",
+                        "label": "DEFER",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "exec",
+                        "label": "EXEC",
+                        "color": "green"
+                    }
+                ]
+            },
+            {
+                "title": "ACCUMULATOR SELECT",
+                "widgets": [
+                    {
+                        "type": "led",
+                        "id": "ac0",
+                        "label": "AC0",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "ac1",
+                        "label": "AC1",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "ac2",
+                        "label": "AC2",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "ac3",
+                        "label": "AC3",
+                        "color": "green"
+                    }
+                ]
+            },
+            {
+                "title": "DATA",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "data_lights",
+                        "bits": 16,
+                        "color": "green",
+                        "label": "DATA (16)",
+                        "group_size": 3
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "data_display",
+                        "digits": 6,
+                        "radix": 8
+                    }
+                ]
+            },
+            {
+                "title": "ADDRESS",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "address_lights",
+                        "bits": 16,
+                        "color": "red",
+                        "label": "ADDR (16)",
+                        "group_size": 3
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "address_display",
+                        "digits": 6,
+                        "radix": 8
+                    }
+                ]
+            },
+            {
+                "title": "DATA SWITCHES",
+                "widgets": [
+                    {
+                        "type": "switch_register",
+                        "id": "switch_reg",
+                        "bits": 16,
+                        "label": "SR (octal)",
+                        "group_size": 3
+                    }
+                ]
+            },
+            {
+                "title": "CONTROL",
+                "widgets": [
+                    {
+                        "type": "button",
+                        "id": "reset_b",
+                        "label": "RESET",
+                        "command": "reset all",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "stop_b",
+                        "label": "STOP",
+                        "command": "halt",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "start_b",
+                        "label": "START",
+                        "command": "run",
+                        "color": "green"
+                    },
+                    {
+                        "type": "button",
+                        "id": "cont_b",
+                        "label": "CONT",
+                        "command": "continue",
+                        "color": "green"
+                    },
+                    {
+                        "type": "button",
+                        "id": "exam_b",
+                        "label": "EXAM",
+                        "command": "examine",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "exam_n",
+                        "label": "EXAM\nNEXT",
+                        "command": "examine +1",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "dep_b",
+                        "label": "DEP",
+                        "command": "deposit",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "dep_n",
+                        "label": "DEP\nNEXT",
+                        "command": "deposit +1",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "load_a",
+                        "label": "LOAD\nADDR",
+                        "command": "load_addr",
+                        "color": "gray"
+                    },
+                    {
+                        "type": "button",
+                        "id": "pload_b",
+                        "label": "PROG\nLOAD",
+                        "command": "boot",
+                        "color": "orange"
+                    }
+                ]
+            }
+        ]
+    },
+    "IBM 1401": {
+        "title": "IBM 1401 Data Processing System",
+        "sections": [
+            {
+                "title": "MODE",
+                "widgets": [
+                    {
+                        "type": "led",
+                        "id": "run_m",
+                        "label": "RUN",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "ie_cycle",
+                        "label": "I/E\nCYCLE",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "single",
+                        "label": "SINGLE\nCYCLE",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "char_disp",
+                        "label": "CHAR\nDISP",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "stor_scan",
+                        "label": "STOR\nSCAN",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "addr_stop",
+                        "label": "ADDR\nSTOP",
+                        "color": "red"
+                    }
+                ]
+            },
+            {
+                "title": "CHECK LIGHTS",
+                "widgets": [
+                    {
+                        "type": "led",
+                        "id": "process",
+                        "label": "PROCESS",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "io_chk",
+                        "label": "I/O\nCHK",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "stor_chk",
+                        "label": "STOR\nCHK",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "parity",
+                        "label": "PAR",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "validity",
+                        "label": "VALID",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "addr_chk",
+                        "label": "ADDR\nCHK",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "reader",
+                        "label": "RDR",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "printer",
+                        "label": "PRT",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "punch",
+                        "label": "PCH",
+                        "color": "yellow"
+                    }
+                ]
+            },
+            {
+                "title": "STORAGE ADDRESS REGISTER",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "sar_lights",
+                        "bits": 16,
+                        "color": "red",
+                        "label": "SAR",
+                        "group_size": 4
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "address_display",
+                        "digits": 4,
+                        "radix": 10
+                    }
+                ]
+            },
+            {
+                "title": "A REGISTER / B REGISTER",
+                "widgets": [
+                    {
+                        "type": "seven_seg",
+                        "id": "a_display",
+                        "digits": 2,
+                        "radix": 10
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "b_display",
+                        "digits": 2,
+                        "radix": 10
+                    }
+                ]
+            },
+            {
+                "title": "OP / DATA REGISTER",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "op_lights",
+                        "bits": 8,
+                        "color": "yellow",
+                        "label": "OP",
+                        "group_size": 4
+                    },
+                    {
+                        "type": "light_register",
+                        "id": "data_lights",
+                        "bits": 8,
+                        "color": "green",
+                        "label": "DATA",
+                        "group_size": 4
+                    }
+                ]
+            },
+            {
+                "title": "SENSE SWITCHES",
+                "widgets": [
+                    {
+                        "type": "toggle",
+                        "id": "ss_a",
+                        "label": "A"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "ss_b",
+                        "label": "B"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "ss_c",
+                        "label": "C"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "ss_d",
+                        "label": "D"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "ss_e",
+                        "label": "E"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "ss_f",
+                        "label": "F"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "ss_g",
+                        "label": "G"
+                    }
+                ]
+            },
+            {
+                "title": "ADDRESS ENTRY",
+                "widgets": [
+                    {
+                        "type": "switch_register",
+                        "id": "switch_reg",
+                        "bits": 16,
+                        "label": "ADDR (hex)",
+                        "group_size": 4
+                    }
+                ]
+            },
+            {
+                "title": "CONTROL",
+                "widgets": [
+                    {
+                        "type": "button",
+                        "id": "start",
+                        "label": "START",
+                        "command": "run",
+                        "color": "green"
+                    },
+                    {
+                        "type": "button",
+                        "id": "stop",
+                        "label": "STOP",
+                        "command": "halt",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "single_c",
+                        "label": "SINGLE\nCYCLE",
+                        "command": "step 1",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "button",
+                        "id": "start_reset",
+                        "label": "START\nRESET",
+                        "command": "reset cpu",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "check_reset",
+                        "label": "CHECK\nRESET",
+                        "command": "reset all",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "display",
+                        "label": "DISPLAY",
+                        "command": "examine",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "alter",
+                        "label": "ALTER",
+                        "command": "deposit",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "tape_load",
+                        "label": "TAPE\nLOAD",
+                        "command": "boot",
+                        "color": "orange"
+                    }
+                ]
+            }
+        ]
+    },
+    "HP 2100": {
+        "title": "Hewlett-Packard 2100A",
+        "sections": [
+            {
+                "title": "STATUS",
+                "widgets": [
+                    {
+                        "type": "led",
+                        "id": "run",
+                        "label": "RUN",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "halt",
+                        "label": "HALT",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "flag",
+                        "label": "FLAG",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "extend",
+                        "label": "EXTEND",
+                        "color": "orange"
+                    },
+                    {
+                        "type": "led",
+                        "id": "overflow",
+                        "label": "OVF",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "a_sel",
+                        "label": "A",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "b_sel",
+                        "label": "B",
+                        "color": "green"
+                    }
+                ]
+            },
+            {
+                "title": "M REGISTER (MEMORY ADDRESS)",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "m_lights",
+                        "bits": 15,
+                        "color": "red",
+                        "label": "M (15)",
+                        "group_size": 3
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "address_display",
+                        "digits": 5,
+                        "radix": 8
+                    }
+                ]
+            },
+            {
+                "title": "T REGISTER (MEMORY DATA)",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "data_lights",
+                        "bits": 16,
+                        "color": "green",
+                        "label": "T (16)",
+                        "group_size": 3
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "data_display",
+                        "digits": 6,
+                        "radix": 8
+                    }
+                ]
+            },
+            {
+                "title": "P REGISTER (PROGRAM COUNTER)",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "address_lights",
+                        "bits": 15,
+                        "color": "red",
+                        "label": "P (15)",
+                        "group_size": 3
+                    }
+                ]
+            },
+            {
+                "title": "DISPLAY REGISTER",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "display_lights",
+                        "bits": 16,
+                        "color": "orange",
+                        "label": "DISPLAY (16)",
+                        "group_size": 3
+                    }
+                ]
+            },
+            {
+                "title": "SWITCH REGISTER",
+                "widgets": [
+                    {
+                        "type": "switch_register",
+                        "id": "switch_reg",
+                        "bits": 16,
+                        "label": "SR (octal)",
+                        "group_size": 3
+                    }
+                ]
+            },
+            {
+                "title": "CONTROL",
+                "widgets": [
+                    {
+                        "type": "button",
+                        "id": "run_b",
+                        "label": "RUN",
+                        "command": "run",
+                        "color": "green"
+                    },
+                    {
+                        "type": "button",
+                        "id": "halt_b",
+                        "label": "HALT",
+                        "command": "halt",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "step_b",
+                        "label": "SINGLE\nINSTR",
+                        "command": "step 1",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "button",
+                        "id": "display_b",
+                        "label": "DISPLAY",
+                        "command": "examine",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "store_b",
+                        "label": "STORE",
+                        "command": "deposit",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "load_a",
+                        "label": "P→",
+                        "command": "load_addr",
+                        "color": "gray"
+                    },
+                    {
+                        "type": "button",
+                        "id": "preset_b",
+                        "label": "PRESET",
+                        "command": "reset all",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "intl_b",
+                        "label": "INTERNAL\nPRESET",
+                        "command": "reset cpu",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "ibl_b",
+                        "label": "IBL",
+                        "command": "boot",
+                        "color": "orange"
+                    }
+                ]
+            }
+        ]
+    },
+    "Honeywell H316": {
+        "title": "Honeywell H316",
+        "sections": [
+            {
+                "title": "STATUS",
+                "widgets": [
+                    {
+                        "type": "led",
+                        "id": "power",
+                        "label": "POWER",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "run",
+                        "label": "RUN",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "parity",
+                        "label": "PAR",
+                        "color": "red"
+                    },
+                    {
+                        "type": "led",
+                        "id": "interrupt",
+                        "label": "INT",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "led",
+                        "id": "ext_mode",
+                        "label": "EXT",
+                        "color": "orange"
+                    }
+                ]
+            },
+            {
+                "title": "REGISTER SELECT",
+                "widgets": [
+                    {
+                        "type": "led",
+                        "id": "sel_x",
+                        "label": "X",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "sel_a",
+                        "label": "A",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "sel_b",
+                        "label": "B",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "sel_op",
+                        "label": "OP",
+                        "color": "green"
+                    },
+                    {
+                        "type": "led",
+                        "id": "sel_py",
+                        "label": "PY",
+                        "color": "green"
+                    }
+                ]
+            },
+            {
+                "title": "REGISTER DISPLAY",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "data_lights",
+                        "bits": 16,
+                        "color": "red",
+                        "label": "REG (16)",
+                        "group_size": 4
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "data_display",
+                        "digits": 6,
+                        "radix": 8
+                    }
+                ]
+            },
+            {
+                "title": "PROGRAM COUNTER",
+                "widgets": [
+                    {
+                        "type": "light_register",
+                        "id": "address_lights",
+                        "bits": 15,
+                        "color": "red",
+                        "label": "P (15)",
+                        "group_size": 4
+                    },
+                    {
+                        "type": "seven_seg",
+                        "id": "address_display",
+                        "digits": 5,
+                        "radix": 8
+                    }
+                ]
+            },
+            {
+                "title": "SENSE SWITCHES",
+                "widgets": [
+                    {
+                        "type": "toggle",
+                        "id": "ss1",
+                        "label": "SS1"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "ss2",
+                        "label": "SS2"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "ss3",
+                        "label": "SS3"
+                    },
+                    {
+                        "type": "toggle",
+                        "id": "ss4",
+                        "label": "SS4"
+                    }
+                ]
+            },
+            {
+                "title": "DATA / ADDRESS SWITCHES",
+                "widgets": [
+                    {
+                        "type": "switch_register",
+                        "id": "switch_reg",
+                        "bits": 16,
+                        "label": "SR (octal)",
+                        "group_size": 4
+                    }
+                ]
+            },
+            {
+                "title": "CONTROL",
+                "widgets": [
+                    {
+                        "type": "button",
+                        "id": "start",
+                        "label": "START",
+                        "command": "run",
+                        "color": "green"
+                    },
+                    {
+                        "type": "button",
+                        "id": "stop",
+                        "label": "STOP",
+                        "command": "halt",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "step_b",
+                        "label": "SINGLE\nSTEP",
+                        "command": "step 1",
+                        "color": "yellow"
+                    },
+                    {
+                        "type": "button",
+                        "id": "display",
+                        "label": "DISPLAY",
+                        "command": "examine",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "store",
+                        "label": "STORE",
+                        "command": "deposit",
+                        "color": "blue"
+                    },
+                    {
+                        "type": "button",
+                        "id": "load_a",
+                        "label": "P→",
+                        "command": "load_addr",
+                        "color": "gray"
+                    },
+                    {
+                        "type": "button",
+                        "id": "mclr",
+                        "label": "MASTER\nCLEAR",
+                        "command": "reset all",
+                        "color": "red"
+                    },
+                    {
+                        "type": "button",
+                        "id": "boot",
+                        "label": "BOOT\nSTRAP",
+                        "command": "boot",
+                        "color": "orange"
+                    }
+                ]
+            }
+        ]
+    }
+}
